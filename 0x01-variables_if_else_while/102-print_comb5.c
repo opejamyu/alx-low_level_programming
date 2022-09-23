@@ -10,27 +10,38 @@
 
 int main(void)
 {
-	int d, p;
+	int c, i, k, j;
 
-	for (d = 0; d < 98; d++)
+	for (c = 48; c <= 57; c++)
 	{
-		for (p = d + 1; p <= 99; p++)
+		for (i = 48; i <= 57; i++)
 		{
-			putchar((d / 10) + '0');
-			putchar((d % 10) + '0');
-			putchar(' ');
-			putchar((p / 10) + '0');
-			putchar((p % 10) + '0');
+			for (k = 48; k <= 57; k++)
+			{
+				for (j = 48; j <= 57; j++)
+				{
+					if (((k + j) > (c + i) &&  k >= c) || c < k)
+					{
+						putchar(c);
+					putchar(i);
+				putchar(' ');
+			putchar(k);
+		putchar(j);
 
-			if (d == 98 && p == 99)
-				continue;
-
-			putchar(',');
-			putchar(' ');
-
+	if (c + i + k + j == 227 && c == 57)
+	{
+	break;
+	}
+	else
+	{
+	putchar(',');
+putchar(' ');
+	}
+					}
+				}
+			}
 		}
 	}
 	putchar('\n');
-
 	return (0);
 }
